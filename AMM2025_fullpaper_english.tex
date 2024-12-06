@@ -1,0 +1,276 @@
+%====================================================
+% Proceedings Template (ENG)
+% The 29th Annual Meeting in Mathematics (AMM 2025)
+% Srinakharinwirot University
+%====================================================
+
+\documentclass[12pt, a4paper, twoside]{article}
+
+\usepackage{geometry,graphicx}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+%\usepackage[hang,flushmargin]{footmisc}
+\geometry{top=5cm, bottom=2.5cm, left=2.5cm, right=2.5cm, headheight=3cm}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage[T1]{fontenc}
+
+%%%References
+\usepackage{etoolbox}
+\apptocmd{\thebibliography}{\setlength{\itemsep}{0pt}}{}{}
+\usepackage{cite}
+\usepackage{enumitem}
+
+%%
+\newcommand\blfootnote[1]{\let\thefootnote\relax\footnotetext{\ignorespaces #1}}
+\addtolength{\footnotesep}{1pt}
+
+\newenvironment{AMM-abstract}[4][]{
+  \begin{center}
+    { \renewcommand\textsuperscript[1]{}\par}
+    {{\Large\bfseries #2}\par}
+    \medskip
+    {\large #3\par}
+    \bigskip
+    {\small #4\par}
+    \bigskip\bigskip
+    {{\large\bfseries Abstract}\par}
+  \end{center}
+}{ 
+  \bigskip
+  \hrule
+  \bigskip
+}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\mykeywords}[1]{%
+    \noindent \textbf{Keywords:} #1 \par
+}
+\newcommand{\myMSC}[1]{
+    \noindent \textbf{2020 MSC:} #1 \par
+}
+
+\pagestyle{fancy}
+\fancyhead[L]{\footnotesize
+The 29\textsuperscript{th} Annual Meeting in Mathematics (AMM 2025)\\
+Department of Mathematics, Faculty of Science,\\
+Srinakharinwirot University,
+Bangkok, Thailand}
+\fancyhead[R]{\includegraphics[width=2.3cm]{amm2025_logo_small_color.png}}
+
+%%%%%%% Use AMSLaTeX Theorem Style %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\numberwithin{equation}{section}
+
+%%%%%%%%%%%%%%% DO NOT make any changes above %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+%%%%%%%%%%%%% PLEASE CUSTOMIZE  BELOW  %%%%%%%%%%%%%%%%%%%%%%%
+%
+%------------  Insert any required packages and definitions here --------------
+% \usepackage{xxx}
+
+\newcommand{\myvec}[1]{\mathbf{#1}}
+%%%%%%
+
+%=======   END OF CUSTOMIZATION  ===========
+
+%%%Color links
+\usepackage[hyperfootnotes=false]{hyperref}
+\hypersetup{
+    colorlinks=true, 
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+}
+
+\begin{document}
+
+\setcounter{section}{0}
+
+%%%%%%%%%%%%%%%%%%%%%  START YOUR DOCUMENT HERE %%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%% ABSTRACT %%%%%%%%%%%%%%%%%%%%
+% Use the following command to write your abstract:
+%
+% \begin{AMM-abstract}[]
+% {Title}
+% {Authors (use \textsuperscript as institution markers)}
+% {Institutions (use \textsuperscript as institution markers)}
+% Abstract text
+% \end{AMM-abstract}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{AMM-abstract}[]
+{Your Title Goes Here} %TITLE
+{First Author\textsuperscript{1,}\footnote{Speaker (name@email.com)}, Second Author\textsuperscript{1}, and Third Author\textsuperscript{2,}\footnote{Corresponding author (name@email.com)}} %AUTHORS
+{\textsuperscript{1}Department of Mathematics, Faculty of Science\\Srinakharinwirot University,
+Bangkok 10110, Thailand\\ \smallskip
+\textsuperscript{2}Department of Mathematics Statistics and Computer, Faculty of Science\\
+Ubon Ratchathani University, Ubon Ratchathani 34190, Thailand} %AFFILIATIONS
+
+%YOUR ABSTRACT GOES HERE
+Write a concise and compelling abstract of no more than 250 words. Your abstract should pique the reader's interest and provide a clear overview of your research.
+To achieve this, structure your abstract as follows:
+
+1) Background: Briefly introduce the broader context of your research and clearly state the specific research question or problem you address.
+ 
+2) Method: Outline the primary methods or techniques used to investigate your research question.
+ 
+3) Result: Summarize the key findings of your study.
+ 
+4) Conclusion: Present the main conclusions or interpretations drawn from your results.
+ 
+Your abstract should accurately reflect the content of your full paper. Avoid making exaggerated claims or introducing results that will not be presented at the conference.
+
+For more information about Mathematics Subject Classification system (2020 MSC), please visit \url{https://mathscinet.ams.org/msnhtml/msc2020.pdf}.
+\end{AMM-abstract}
+
+%%%%%%%%%%%%%%%%% Keywords and MSC %%%%%%%%%%%%%%%%%%%%%%
+
+\mykeywords{keyword1, keyboard2, keyboard3} %Please include 3-5 keywords here. Use comma to separate items in the list.
+\smallskip
+\myMSC{nnXxx, nnXxx, nnXxx} %Please include MSC here. The first item is the primary MSC. Use comma to separate items in the list.
+
+%%%%%%%%%%%%%%%%%%% Main Text %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}\label{yourname:intro}
+Your text goes here. Separate text sections with the standard \LaTeX\ sectioning commands. The introduction provides background on the research topic, establishes its significance, and outlines the study's objectives. It should review relevant literature, identify gaps or unresolved issues, and clearly state the research question or hypothesis, setting the stage for the study's contribution to the field.
+
+\section{Preliminaries}\label{yourname:prelim}
+Use the \LaTeX\ automatism for your citations \cite{yourname:book, yourname:bookchapter, yourname:article}. Please ensure that every reference given in the reference list must also be cited in the text. Use Elsevier's standard numbered style for in-text citations and references. 
+Number the references (numbers in square brackets) in the list in the order in which they appear in the text. Please see the source file for examples. For more information, please visit \url{https://booksite.elsevier.com/9780081019375/content/Elsevier\%20Standard\%20Reference\%20Styles.pdf}. For an extensive list of journal abbreviations, please visit \url{https://mathscinet.ams.org/msnhtml/serials.pdf}.
+
+\subsection{Subsection Heading}\label{yourname:intro_I}
+One may use inline equations, $y^{\prime}+4y^2=0$, or displayed equations
+\[
+	\vec{a}\times\vec{b} = \vec{c}+\sum_{i=1}^n C_i.
+\]
+Equations will be labeled by section with equation numbers located on the right: Consider
+\begin{equation}\label{yourname:eq15}
+	h =T \left ( \sum_{i=1}^n x_i \otimes y_i \right ).
+\end{equation}
+Please note that all internal labels and all cites 
+should be prefixed by the author's last name as follows.
+\begin{verbatim}
+YourName:ref
+\end{verbatim}
+For example, if your last name is ``Peters,''  a label should be as follows.
+\begin{verbatim}
+\label{peters:eq15}
+\end{verbatim}
+
+\subsubsection{Subsubsection Heading}
+Use the \LaTeX\ automatism for cross-references as well as for your citations. For example, see Section \ref{yourname:intro_I} and equation (\ref{yourname:eq15}). Use AMSLaTeX theorem style for definitions, theorems, lemmas, etc. 
+
+\begin{definition}
+Let $A \subseteq \mathbb{R}^n$ be a convex set. A point $x \in A$ is called an \emph{extreme point} if $\dots$
+\end{definition}
+
+\begin{theorem}
+	Theorem text goes here.
+\end{theorem}
+\begin{proof}
+   The proof is left as an exercise for the reader.
+\end{proof}
+
+\begin{lemma}
+	Lemma text goes here.
+\end{lemma}
+
+\section{Main Results}
+
+Use floats for your figures and tables. Put figure files in the same folder as the TeX source file\footnote{This is a regular footnote.}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.1]{amm2025_logo_small_color.png}
+\caption{AMM 2025 Srinakharinwirot University 21-23 May 2025}
+\label{yourname:ammlogo}
+\end{figure}
+
+\begin{table}[h]
+\caption{AMM hosts}
+\begin{center}
+\begin{tabular}{clc}  \hline
+ AMM & Host & Year\\ \hline\hline
+ $26^{th}$ & SUT &$2022$ \\ 
+$27^{th}$ & KU  &$2023$ \\ 
+$28^{th}$ & UBU &$2024$ \\ 
+$29^{th}$ & SWU &$2025$ \\ 	 
+\hline
+\end{tabular}
+\label{yourname:tableofamm}
+\end{center}
+\end{table}
+
+\section{Discussion}
+The discussion interprets the findings, connects them to existing research, and highlights their significance for the field. It should also acknowledge the study's limitations and propose directions for future research, emphasizing the broader impact of the results.
+
+\bigskip\noindent
+\textbf{Acknowledgment.} The authors are grateful to the referees for their careful reading of the manuscript and their useful comments. Author3 is supported by ...
+
+\begin{thebibliography}{99}
+%Please type your references directly into the source file.
+%Please order your bibliography items in the order they appear in the text.
+
+%%%Book
+\bibitem{yourname:book}
+D. Gopal, P. Kumam, M. Abbas, Background and Recent Developments of Metric Fixed Point Theory, Taylor \& Francis Group LLC, New York, 2017.
+
+%%%Book Chapter
+\bibitem{yourname:bookchapter}
+A. Dorko, What do we know about student learning from online mathematics homework?, in: J.P. Howard II, J.F. Beyes (Eds.), Teaching and Learning Mathematics Online, Boca Raton, C\&H/CRC Press, pp. 17--42.
+
+%%% Journal article
+\bibitem{yourname:article} T. Theerakarn, On the center of surface area of the boundary of a star-shaped region, College Math. J. 54 (3) (2023) 326--336.
+
+%Multiple authors : less than 7
+\bibitem{yourname:multiple} S. Isariyapalakul, W. Pho-on, V. Khemmani, The true twin classes-based investigation for connected local dimensions of connected graphs, AIMS Math. 9 (4) (2024) 9435--9446.
+
+%Multiple authors : 7 or more
+\bibitem{yourname:seven} S. Weikert, D. Freyer, M. Weih, N. Isaev, C. Busch, J. Schultze, et al., Rapid Ca\textsuperscript{2+}
+-dependent NO-production from central nervous system cells in culture measured by NO-nitrite/ozone chemoluminescence, Brain
+Res. 748 (1997) 1--11.
+
+%Article in other language
+\bibitem{yourname:lang} K. Sirisomboonwech, C. Lekjaroensri, N. Rerkruthairat, S. Insakul, Hog dice game with additional rules, Math. J. Math. Assoc. Thai. 68 (709) (2023) 1--18 (in Thai). 
+
+%%% Article in Conference Proceedings
+\bibitem{yourname:proceedings}
+T.E. Chaddock, Gastric emptying of a nutritionally balanced liquid diet, in: E.E. Daniel (Ed.),
+Proceedings of the Fourth International Symposium on Gastrointestinal Motility, ISGM4, 4--8 September 1973, Seattle,
+WA, Mitchell Press, Vancouver, British Columbia, Canada, 1974, pp. 83--92.
+
+%%% Website
+\bibitem{yourname:website} Cancer Research UK, Cancer statistics reports for the UK.
+ <\url{http://www.cancerresearchuk.org/aboutcancer/statistics/cancerstatsreport/}>, 2003 (accessed 13.03.03).
+
+%%% Translated Book
+\bibitem{yourname:translated} A.R. Luria, The Mind of a Mnemonist (L. Solotarof, Trans.), Avon Books, New York, 1969 (Original
+work published 1965).
+
+%%% Thesis
+\bibitem{yourname:thesis} T. Theerakarn, Locally volume collapsed 4-manifolds with respect to a lower sectional curvature bound, (Doctoral dissertation), UC Berkeley, 2018 \url{https://escholarship.org/uc/item/0x37d5vr}.
+
+
+\end{thebibliography}
+
+
+\end{document}
